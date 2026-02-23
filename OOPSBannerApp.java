@@ -1,24 +1,33 @@
 /**
  * OOPS Banner App - Use Case 1
  * This program prints the literal text "OOPS" to the console.
- /**
- * OOPS Banner App - Use Case 3
- * Refactored to use modular methods for better code organization.
+ import java.util.Scanner; // Required for user input
+
+/**
+ * OOPS Banner App - Use Case 4
+ * Refactored to include user interaction and personalized messages.
  * * @author Harikrishanan
- * @version 3.0
+ * @version 4.0
  */
 public class OOPSBannerApp {
 
     public static void main(String[] args) {
-        // Now we just "call" the method instead of writing all 7 lines here
-        printOopsBanner(); 
+        // Create a Scanner object to read input
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Please enter your name: ");
+        String userName = input.nextLine(); // Reads the name typed by the user
+
+        // Display personalized greeting
+        System.out.println("\nHello " + userName + "! Welcome to the OOPS Banner App.");
+        
+        // Call the modular method from UC3
+        printBanner();
+        
+        input.close(); // Professional practice to close the scanner
     }
 
-    /**
-     * This method contains the logic to print the 7-line ASCII banner.
-     * Breaking code into methods like this is called "Modularization".
-     */
-    public static void printOopsBanner() {
+    public static void printBanner() {
         System.out.println("  **** **** ***** **** ");
         System.out.println(" * * * * * * * ");
         System.out.println(" * * * * * * * ");
