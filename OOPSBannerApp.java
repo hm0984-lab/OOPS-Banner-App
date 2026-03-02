@@ -41,12 +41,10 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        // Call helper methods
         String[] oPattern = getOPattern();
         String[] pPattern = getPPattern();
         String[] sPattern = getSPattern();
 
-        // Assemble OOPS using loop
         for (int i = 0; i < oPattern.length; i++) {
             System.out.println(
                 oPattern[i] + "   " +
